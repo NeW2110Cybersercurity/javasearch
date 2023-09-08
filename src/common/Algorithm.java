@@ -61,7 +61,6 @@ public class Algorithm {
         }
     }
 
-    /*
     public int binarySearch(int[] array, int value, int left, int right) {
         if (left > right) {
             return -1;
@@ -74,23 +73,32 @@ public class Algorithm {
         } else {
             return binarySearch(array, value, middle + 1, right);
         }
-    }*/
-//    public int binarySearch(int[] arr, int target) {
-//        int left = 0;
-//        int right = arr.length - 1;
-//
-//        while (left <= right) {
-//            int mid = left + (right - left) / 2;
-//
-//            if (arr[mid] == target) {
-//                return mid;
-//            } else if (arr[mid] < target) {
-//                left = mid + 1;
-//            } else {
-//                right = mid - 1;
-//            }
-//        }
-//
-//        return -1; // target not found
-//    }
+    }
+    public int binarySearch(int[] arr, int target) {
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (arr[mid] == target) {
+                return mid;
+            } else if (arr[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+
+        return -1; // target not found
+    }
+    public int linearSearch(int[] array, int value) {
+    for (int i = 0; i < array.length; i++) {
+        if (array[i] == value) {
+            return i; // Return the index of the value if found
+        }
+    }
+    return -1; // Return -1 if the value is not found in the array
+}
+
 }
