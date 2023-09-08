@@ -98,9 +98,10 @@ public class SortProgramming extends Menu<String> {
                 int value = library.getInt("\nEnter number to find: ", 1, 100);
                 switch (n) {
                     case 1:
+                        System.out.println("Found value: " + value + " at index: " + algorithm.linearSearch(array, value));
                         break;
                     case 2:
-//                        System.out.println("Found value: " + value + " at index: " + algorithm.binarySearch(array, value));
+                        System.out.println("Found value: " + value + " at index: " + algorithm.binarySearch(array, value));
                         break;
                     case 3:
                         System.exit(0);
